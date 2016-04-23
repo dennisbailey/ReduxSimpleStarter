@@ -15,6 +15,8 @@ import YTSearch from 'youtube-api-search';
 // import the YouTubes API Key
 import { apiKey } from '../config.js';
 
+// import lodash
+import _ from 'lodash';
 
 // Alternate method to extend App
 // Let Component = React.Component
@@ -42,7 +44,7 @@ class App extends React.Component {
   
   // You must have a render funtion within every react component
   render() {
-    console.log('state: ', this.state);
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
     // render components can only return one element. But that element can wrap around multiple elements
     return (
       <div>
