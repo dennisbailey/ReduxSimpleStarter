@@ -9,6 +9,7 @@ import ReactDom from 'react-dom';
 // Realtive path to the component
 import SearchBar from './components/SearchBar';
 
+
 // Alternate method to extend App
 // Let Component = React.Component
 // class App extends Component
