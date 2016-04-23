@@ -32,15 +32,21 @@ class App extends React.Component {
   }
   
   videoSearch(term) {
-    YTSearch({ key: apiKey, term: term}, (videos) => {console.log(videos)});
+    YTSearch( { key: apiKey, 
+                term: term }, 
+              (videos) => { this.setState({ videos,
+                                            selectedVideo: videos[0]
+                          })
+    });
   }
   
   // You must have a render funtion within every react component
   render() {
+    console.log('state: ', this.state);
     // render components can only return one element. But that element can wrap around multiple elements
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange = { this.videoSearch.bind(this) } />
       </div>
     )
   }

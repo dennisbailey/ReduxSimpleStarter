@@ -3,15 +3,16 @@ import React, {Component } from 'react';
 
 class SearchBar extends Component {
   // add some methods to this class
-  constructor() {
+  constructor(props) {
     // constructors need super ot call the parent constructor
-    super();
+    super(props);
     this.state = { term: '' }
   }
   
   onInputChange(term) {
     // ES6 { term } is the same as { term: term }
     this.setState({ term });
+    this.props.onSearchTermChange(term);
   }
   
   render () {
