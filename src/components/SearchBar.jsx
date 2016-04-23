@@ -10,7 +10,8 @@ class SearchBar extends Component {
   }
   
   onInputChange(term) {
-    this.setState({ term: term });
+    // ES6 { term } is the same as { term: term }
+    this.setState({ term });
   }
   
   render () {
