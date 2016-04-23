@@ -4,7 +4,9 @@ import React, {Component } from 'react';
 class SearchBar extends Component {
   // add some methods to this class
   constructor() {
-    this.state = { term: ''}
+    // constructors need super ot call the parent constructor
+    super();
+    this.state = { term: '' }
   }
   
   render () {
