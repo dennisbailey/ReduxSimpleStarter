@@ -1,8 +1,14 @@
 // ES6 syntax to require
 // var React = require('react')
 import React from 'react';
+
+
 //Helper method to attach react to the DOM
 import ReactDom from 'react-dom';
+
+// Alternate method to extend App
+// Let Component = React.Component
+// class App extends Component
 
 class App extends React.Component {
   // You must have a render funtion within every react component
