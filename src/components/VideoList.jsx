@@ -6,7 +6,7 @@ import React from 'react';
 const VideoList = (props) => {
   const videoItems = props.videos.map((video) => {
     return (
-      <li>{video.snippet.title}</li>
+      <li key={ video.etag }>{video.snippet.title}</li>
     )
   });
   return (
