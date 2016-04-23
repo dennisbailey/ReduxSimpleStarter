@@ -1,6 +1,6 @@
 // Here's a functional component. Function components don't worry about state. They just render stuff
-
-import React, from ''react';
+// Less expensive than a class component
+import React from 'react';
 
 const VideoList = (props) => {
   return (

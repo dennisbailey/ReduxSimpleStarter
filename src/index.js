@@ -6,8 +6,9 @@ import React from 'react';
 //Helper method to attach react to the DOM
 import ReactDom from 'react-dom';
 
-// Realtive path to the component
+// Realtive path to the components
 import SearchBar from './components/SearchBar';
+import VideoList from './components/VideoList';
 
 // import the YouTubes Search API module 
 import YTSearch from 'youtube-api-search';
