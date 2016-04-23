@@ -2,10 +2,17 @@
 import React, {Component } from 'react';
 
 class SearchBar extends Component {
+  // add some methods to this class
+  constructor() {
+    this.state = { term: ''}
+  }
+  
   render () {
     return (
       <div className="search-bar">
-        <input />
+        <input 
+          value={this.state.term}
+        />
       </div> 
     )
   }
