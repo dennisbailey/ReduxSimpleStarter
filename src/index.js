@@ -6,6 +6,9 @@ import React from 'react';
 //Helper method to attach react to the DOM
 import ReactDom from 'react-dom';
 
+// Realtive path to the component
+import SearchBar from './components/SearchBar';
+
 // Alternate method to extend App
 // Let Component = React.Component
 // class App extends Component
@@ -15,7 +18,9 @@ class App extends React.Component {
   render() {
     // render components can only return one element. But that element can wrap around multiple elements
     return (
-      <div>Im a react component</div>
+      <div>
+        <SearchBar />
+      </div>
     )
   }
 }
