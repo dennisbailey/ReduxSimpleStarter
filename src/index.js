@@ -50,6 +50,7 @@ class App extends React.Component {
     return (
       <div>
         <SearchBar onSearchTermChange = { this.videoSearch.bind(this) } />
+        <VideoList videos={ this.state.videos } />
       </div>
     )
   }
