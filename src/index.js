@@ -10,7 +10,7 @@ import ReactDom from 'react-dom';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 
-// import the YouTubes Search API module 
+// import the YouTubes Search API module
 import YTSearch from 'youtube-api-search';
 
 // import the YouTubes API Key
@@ -24,25 +24,24 @@ import _ from 'lodash';
 // class App extends Component
 
 class App extends React.Component {
-  
+
   constructor() {
     super();
-    
-    this.state = { videos: [], 
+
+    this.state = { videos: [],
                    selectedVideo: null };
-                   
+
                    this.videoSearch('Firewatch');
   }
-  
+
   videoSearch(term) {
-    YTSearch( { key: apiKey, 
-                term: term }, 
-              (videos) => { this.setState({ videos,
-                                            selectedVideo: videos[0]
-                          })
+    YTSearch( { key: apiKey,
+                term: term },
+                (videos) => { this.setState({ videos,
+                                              selectedVideo: videos[0] })
     });
   }
-  
+
   // You must have a render funtion within every react component
   render() {
     const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
